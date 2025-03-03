@@ -15,5 +15,10 @@ mongoose.connect(process.env.MONGO_URI, { dbName: "BackendDb" })
 // Use authentication routes
 app.use("/api/auth", require("./routes/auth"));
 
+// Main Route
+app.get("/", (req, res) => {
+    res.send("Welcome to the User Authentication System. Use /api/auth/register to register, /api/auth/login to login, and /api/auth/reset-password to reset password.");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

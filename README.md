@@ -67,7 +67,7 @@ http://localhost:5000/api/auth/reset-password
 Request Body:
 {
   "email": "user_name@example.com",
-  "password": "new_password_of_6_digits"
+  "newPassword": "new_password_of_6_digits"
 }
 
 response will be:

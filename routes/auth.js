@@ -20,6 +20,12 @@ router.post("/register", async (req, res) => {
     if (!name) {
       return res.status(400).json({ msg: "Name is required" });
     }
+    if (!email) {
+      return res.status(400).json({ msg: "Email is required" });
+    }
+    if (!password) {
+      return res.status(400).json({ msg: "Password is required" });
+    }
 
     const validation = authSchema.safeParse({ email, password });
     if (!validation.success) {
@@ -53,6 +59,12 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
+    if (!email) {
+      return res.status(400).json({ msg: "Email is required" });
+    }
+    if (!password) {
+      return res.status(400).json({ msg: "Password is required" });
+    }
     const validation = authSchema.safeParse({ email, password });
     if (!validation.success) {
       return res.status(400).json({ errors: validation.error.errors });

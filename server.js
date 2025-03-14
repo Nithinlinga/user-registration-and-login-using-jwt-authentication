@@ -24,18 +24,20 @@ app.use("/api/questions", questionRoutes);
 // Main Route
 app.get("/", (req, res) => {
     res.send(`
-        <h2>Welcome to the User Authentication System API</h2>
-        <p>This is a backend API for authentication and question management.</p>
-        <p>Use the following endpoints to interact with the system:</p>
-        <ul>
-            <li><strong>POST /api/auth/register</strong> - Register a new user</li>
-            <li><strong>POST /api/auth/login</strong> - Log in an existing user</li>
-            <li><strong>POST /api/auth/reset-password</strong> - Reset user password</li>
-            <li><strong>GET /api/questions</strong> - Fetch all questions</li>
-            <li><strong>POST /api/questions</strong> - Add a new question</li>
-        </ul>
-        <p>CORS is enabled for all domains.</p>
-        <p>Check the complete source code on <a href="https://github.com/Nithinlinga/user-registration-and-login-using-jwt-authentication.git">GitHub</a>.</p>
+        <div style="text-align: center; font-family: Arial, sans-serif;">
+            <h2>Welcome to the User Authentication System API</h2>
+            <p>This is a backend API for authentication and question management.</p>
+            <p>Use the following endpoints to interact with the system:</p>
+            <ul style="display: inline-block; text-align: left;">
+                <li><strong>POST /api/auth/register</strong> - Register a new user</li>
+                <li><strong>POST /api/auth/login</strong> - Log in an existing user</li>
+                <li><strong>POST /api/auth/reset-password</strong> - Reset user password</li>
+                <li><strong>GET /api/questions</strong> - Fetch all questions</li>
+                <li><strong>POST /api/questions</strong> - Add a new question</li>
+            </ul>
+            <p>CORS is enabled for all domains.</p>
+            <p>Check the complete source code on <a href="https://github.com/Nithinlinga/user-registration-and-login-using-jwt-authentication.git" target="_blank">GitHub</a>.</p>
+        </div>
     `);
 });
 
